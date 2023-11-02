@@ -1,0 +1,56 @@
+@keyframes fade{
+    from{
+        opacity: 100%;
+    }
+    to{
+        opacity: 0%;
+    }
+}
+@keyframes fadeIn{
+    from{
+        opacity: 0%;
+    }
+    to{
+        opacity: 100%;
+    }
+}
+@media(max-width:650px){
+    .footer-logo-wrapper{
+        display: none;
+    }
+    .input-text{
+        display: none;
+    }
+    .footer{
+        padding:40px 54px;
+    }
+    .column{
+        margin-top: 15px;
+    }
+}
+@media(max-width:450px){
+    .web-version-header{
+        display: none;
+
+    }
+    .mobile-header-wrap{
+        animation-name: fadeIn;
+        animation-duration: 0.5s;
+        display: flex;
+    }
+    .header{
+        padding-bottom: 0px;
+    }
+}
+
+@media(max-width:1080px){
+    .socials-wrap{
+        margin-top: 100px;
+    }
+}
+@media(max-width:930px){
+    .input-wrap{
+        margin-top: 50px;
+    }
+}
+
