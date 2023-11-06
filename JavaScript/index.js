@@ -15,9 +15,9 @@ barMenu.addEventListener("click", function () {
       x.classList.toggle("none");
     });
   } else if (clickCount % 2 === 1) {
-    mainSections.forEach(x => {
+    mainSections.forEach((x) => {
       x.classList.toggle("none");
-    })
+    });
   }
   clickCount++;
 });
@@ -32,74 +32,264 @@ window.addEventListener("resize", function () {
   }
 });
 
-//s l i d e r
-
+//s l i d e r #1
+let leftArrow = document.getElementById("arrowLeft");
+let rightArrow = document.getElementById("arrowRight");
+let left = document.getElementById("left");
+console.log(left);
+let sliderIndex = 0;
 let slider = [
   {
-    id:1,
+    id: 1,
     imageURL: "../Images/Photos/slider-image.png",
-    headerText:"World news",
-    topic:"Amazing places in America to visit.",
-    description:"For some reason — this country, this city, this neighborhood, this particular street — is the place you are living a majority of your life in."
+    headerText: "World news",
+    topic: "Amazing places in America to visit.",
+    description:
+      "For some reason — this country, this city, this neighborhood, this particular street — is the place you are living a majority of your life in.",
+  },
+  {
+    id: 2,
+    imageURL: "../Images/Photos/slider-image-2.png",
+    headerText: "Places to visit",
+    topic: "Amazing places in europe to visit.",
+    description:
+      "Experience Europe's charm! From Italy's art to France's cuisine, immerse in diverse cultures, stunning landscapes, and rich history. Your adventure awaits!",
+  },
+  {
+    id: 3,
+    imageURL: "../Images/Photos/slider-image-3.png",
+    headerText: "Georgia",
+    topic: "Place full of love and beauty!",
+    description:
+      "Discover Georgia in the Caucasus! A blend of ancient history, breathtaking landscapes, warm hospitality, and delectable cuisine. Unveil a hidden gem!",
+  },
+];
 
+function setNewSlide(item) {
+  // div sliderWrapper
+  let divWrapper = document.createElement('div');
+  divWrapper.classList.add('sliderWrapper');
+  //slider img
+  let image = document.createElement('img');
+  image.setAttribute('src', item.imageURL);
+  //div textWrapper
+  let textWrapper = document.createElement('div');
+  textWrapper.classList.add('text-information');
+  //h2
+  let headerTag = document.createElement('h2');
+  headerTag.innerText = item.headerText;
+  //hr
+  let hr = document.createElement('hr');
+  //h3
+  let h3 =document.createElement('h3');
+  h3.innerText = item.topic;
+  //p
+  let paragraph =document.createElement('p');
+  paragraph.innerText = item.description;
+  let button = document.createElement('button');
+  button.innerText = 'learn more';
+  divWrapper.appendChild(image);
+  textWrapper.appendChild(headerTag);
+  textWrapper.appendChild(h3);
+  textWrapper.appendChild(paragraph);
+  textWrapper.appendChild(button);
+  divWrapper.appendChild(textWrapper);
+
+  return divWrapper;
+}
+
+left.appendChild(setNewSlide(slider[sliderIndex]))
+
+function clearTag(){
+  left.innerHTML = ''
+}
+
+rightArrow.addEventListener("click", () => {
+  if(sliderIndex == slider.length-1){
+    sliderIndex = 0;
+  }else{
+    sliderIndex++;
+  }
+  clearTag();
+  left.appendChild(setNewSlide(slider[sliderIndex]));
+  
+});
+
+leftArrow.addEventListener("click", () => {
+  if(sliderIndex == 0){
+    sliderIndex=slider.length-1;
+  }else{
+    sliderIndex--;
+  }
+  clearTag();
+  left.appendChild(setNewSlide(slider[sliderIndex]));
+  
+});
+
+
+
+//S L I D E R  #2
+
+let secondSlider = [
+  {
+    id:1,
+    img1URL:"../Images/Photos/section-photo-1(JS).png",
+    img1URL2:"../Images/Photos/section-photo-2(JS).png",
+    img1URL3:"../Images/Photos/section-photo-3(JS).png",
+    header:"Dolore magna aliqua",
+    header2:"Morbi eleifend a libero",
+    paragraph:"Lorem ipsum dolor sit amet, ipsum labitur lucilius mel id, ad has appareat.",
+    clockIMG:"../Images/Logos/time.png",
+    time1:"2m ago",
+    time2:"1h ago",
+    time3:"2h ago",
   },
   {
     id:2,
-    imageURL: "../Images/Photos/slider-image-2.png",
-    headerText:"Places to visit",
-    topic:"Amazing places in europe to visit.",
-    description:"Experience Europe's charm! From Italy's art to France's cuisine, immerse in diverse cultures, stunning landscapes, and rich history. Your adventure awaits!"
-
+    img1URL:"../Images/Photos/section-photo-4(JS).jpg",
+    img1URL2:"../Images/Photos/section-photo-5(JS).jpg",
+    img1URL3:"../Images/Photos/section-photo-6(JS).jpg",
+    header:"Dolore magna aliqua",
+    header2:"Morbi eleifend a libero",
+    paragraph:"Lorem ipsum dolor sit amet, ipsum labitur lucilius mel id, ad has appareat.",
+    clockIMG:"../Images/Logos/time.png",
+    time1:"2m ago",
+    time2:"1h ago",
+    time3:"2h ago",
   },
   {
     id:3,
-    imageURL: "../Images/Photos/slider-image-3.png",
-    headerText:"Georgia",
-    topic:"Place full of love and beauty!",
-    description:"Discover Georgia in the Caucasus! A blend of ancient history, breathtaking landscapes, warm hospitality, and delectable cuisine. Unveil a hidden gem!"
-
-  },
+    img1URL:"../Images/Photos/section-photo-7(JS).jpg",
+    img1URL2:"../Images/Photos/section-photo-8(JS).jpg",
+    img1URL3:"../Images/Photos/section-photo-9(JS).jpg",
+    header:"Dolore magna aliqua",
+    header2:"Morbi eleifend a libero",
+    paragraph:"Lorem ipsum dolor sit amet, ipsum labitur lucilius mel id, ad has appareat.",
+    clockIMG:"../Images/Logos/time.png",
+    time1:"2m ago",
+    time2:"1h ago",
+    time3:"2h ago",
+  }
 ]
 
-let arrowRight = document.querySelector(".forward");
-let arrowLeft = document.querySelector(".backward");
-let section = document.getElementById("sliderSection");
-let leftSide = document.querySelector(".left");
-let sliderIndex = 0;
+//append object
+let secondLeftArrow = document.getElementById("dinamicSectionLeft");
+let secondRightArrow = document.getElementById("dinamicSectionRight");
+let appendObject = document.querySelector(".section-from-js");
+let secondIndex = 0;
+function setSecondSlider(object) {
+  //main wrapper
+  let mainWrapper=document.createElement("div");
+  mainWrapper.classList.add('from-js')
+  // div sliderWrapper
+  let divWrapper1 = document.createElement('div');
+  let divWrapper2 = document.createElement('div');
+  let divWrapper3 = document.createElement('div');
+  divWrapper1.classList.add('blockWrapper');
+  divWrapper2.classList.add('blockWrapper');
+  divWrapper3.classList.add('blockWrapper');
+  //slider img
+  let image1 = document.createElement('img');
+  let image2 = document.createElement('img');
+  let image3 = document.createElement('img');
+  image1.setAttribute('src', object.img1URL);
+  image2.setAttribute('src', object.img1URL2);
+  image3.setAttribute('src', object.img1URL3);
+  //div textWrapper
+  let textWrapper1 = document.createElement('div');
+  let textWrapper2 = document.createElement('div');
+  let textWrapper3 = document.createElement('div');
+  textWrapper1.classList.add('text-wrapper-js');
+  textWrapper2.classList.add('text-wrapper-js');
+  textWrapper3.classList.add('text-wrapper-js');
+  //h2
+  let headerTag1 = document.createElement('h2');
+  let headerTag2 = document.createElement('h2');
+  let headerTag3 = document.createElement('h2');
+  headerTag1.innerText = object.header;
+  headerTag2.innerText = object.header2;
+  headerTag3.innerText = object.header2;
+  //p
+  let paragraph1 =document.createElement('p');
+  let paragraph2 =document.createElement('p');
+  let paragraph3 =document.createElement('p');
+  paragraph1.innerText = object.paragraph;
+  paragraph2.innerText = object.paragraph;
+  paragraph3.innerText = object.paragraph;
+  //div clock
+  let divClock1 =document.createElement("div");
+  let divClock2 =document.createElement("div");
+  let divClock3 =document.createElement("div");
+  divClock1.classList.add("time-wrapper");
+  divClock2.classList.add("time-wrapper");
+  divClock3.classList.add("time-wrapper");
+  //clock
+  let clock1 = document.createElement("img");
+  let clock2 = document.createElement("img");
+  let clock3 = document.createElement("img");
+  clock1.setAttribute("src", object.clockIMG);
+  clock2.setAttribute("src", object.clockIMG);
+  clock3.setAttribute("src", object.clockIMG);
+  //
+  let postTime1= document.createElement("p");
+  let postTime2= document.createElement("p");
+  let postTime3= document.createElement("p");
+  postTime1.innerText=object.time1;
+  postTime2.innerText=object.time1;
+  postTime3.innerText=object.time1;
+  //append
 
-function createDiv(item){
-
-  //create
-  let div = document.createElement('div');
-  let image = document.createElement('img');
-  let headerElement = document.createElement('h1');
-  let topic =document.createElement("h3") ;
-  let description = document.createElement("p");
-  let button = document.createElement("button");
-
-  //set classNames
-  div.classList.add('block');
-  headerElement.classList.add('slider-header');
-  topic.classList.add("slider-topic");
-  button.classList.add("button");
-  image.classList.add("image");
-  //fill with information
-  headerElement.innerText = item.headerText;
-  topic.innerText = item.topic;
-  description.innerText = item.description;
-  button.innerText = "LEARN MORE";
-  image.setAttribute('src', item.imageURL);
-  //append elements
-  div.appendChild(image);
-  div.appendChild(headerElement);
-  div.appendChild(topic);
-  div.appendChild(button);
-  div.appendChild(description);
-  return div;
+  // block 1
+  divWrapper1.appendChild(image1);
+  divWrapper1.appendChild(headerTag1);
+  divWrapper1.appendChild(paragraph1);
+  divClock1.appendChild(clock1);
+  divClock1.appendChild(postTime1);
+  divWrapper1.appendChild(divClock1);
+// block 2
+  divWrapper2.appendChild(image2);
+  divWrapper2.appendChild(headerTag2);
+  divWrapper2.appendChild(paragraph2);
+  divWrapper2.appendChild(divClock2);
+  divClock2.appendChild(clock2);
+  divClock2.appendChild(postTime2);
+// block 3
+  divWrapper3.appendChild(image3);
+  divWrapper3.appendChild(headerTag3);
+  divWrapper3.appendChild(paragraph3);
+  divWrapper3.appendChild(divClock3);
+  divClock3.appendChild(clock3);
+  divClock3.appendChild(postTime3);
+// main block
+  mainWrapper.appendChild(divWrapper1);
+  mainWrapper.appendChild(divWrapper2);
+  mainWrapper.appendChild(divWrapper3);
+  return mainWrapper;
 }
 
-function setSlide(){
-  leftSide.appendChild(createDiv(slider[sliderIndex]));
-}
+appendObject.appendChild(setSecondSlider(secondSlider[secondIndex]));
 
-setSlide();
+secondRightArrow.addEventListener("click", () => {
+  if(secondIndex == secondSlider.length-1){
+    secondIndex = 0;
+  }else{
+    secondIndex++;
+  }
+  clearSecondSlider();
+  appendObject.appendChild(setSecondSlider(secondSlider[secondIndex]));
+});
+
+secondLeftArrow.addEventListener("click", () => {
+  if(secondIndex == 0){
+    secondIndex=secondSlider.length-1;
+  }else{
+    secondIndex--;
+  }
+  clearSecondSlider();
+  appendObject.appendChild(setSecondSlider(secondSlider[secondIndex]));
+  
+});
+
+function clearSecondSlider(){
+  appendObject.innerHTML = ''
+}
