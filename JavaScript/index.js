@@ -74,7 +74,7 @@ let sliderIndex = 0;
 let slider = [
   {
     id: 1,
-    imageURL: "https://images.pexels.com/photos/450597/pexels-photo-450597.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    imageURL: "https://images.pexels.com/photos/973049/pexels-photo-973049.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     headerText: "World news",
     topic: "Amazing places in America to visit.",
     description:
@@ -82,7 +82,7 @@ let slider = [
   },
   {
     id: 2,
-    imageURL: "https://images.pexels.com/photos/773471/pexels-photo-773471.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    imageURL: "https://images.pexels.com/photos/1933239/pexels-photo-1933239.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     headerText: "Places to visit",
     topic: "Amazing places in europe to visit.",
     description:
@@ -90,7 +90,7 @@ let slider = [
   },
   {
     id: 3,
-    imageURL: "https://images.pexels.com/photos/17996279/pexels-photo-17996279/free-photo-of-drone-shot-of-tbilisi.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    imageURL: "https://images.pexels.com/photos/10936088/pexels-photo-10936088.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     headerText: "Georgia",
     topic: "Place full of love and beauty!",
     description:
