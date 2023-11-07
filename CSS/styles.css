@@ -625,6 +625,10 @@ header > .web-version-header > nav > ul {
 .send {
   cursor: pointer;
 }
+.time-wrapper > img{
+  width: 10px;
+  height: 10px;
+}
 .socials-wrap {
   width: 150px;
   height: 16px;
