@@ -74,7 +74,7 @@ let sliderIndex = 0;
 let slider = [
   {
     id: 1,
-    imageURL: "../Images/Photos/slider-image.png",
+    imageURL: "https://images.pexels.com/photos/450597/pexels-photo-450597.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     headerText: "World news",
     topic: "Amazing places in America to visit.",
     description:
@@ -82,7 +82,7 @@ let slider = [
   },
   {
     id: 2,
-    imageURL: "../Images/Photos/slider-image-2.png",
+    imageURL: "https://images.pexels.com/photos/773471/pexels-photo-773471.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     headerText: "Places to visit",
     topic: "Amazing places in europe to visit.",
     description:
@@ -90,7 +90,7 @@ let slider = [
   },
   {
     id: 3,
-    imageURL: "../Images/Photos/slider-image-3.png",
+    imageURL: "https://images.pexels.com/photos/17996279/pexels-photo-17996279/free-photo-of-drone-shot-of-tbilisi.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     headerText: "Georgia",
     topic: "Place full of love and beauty!",
     description:
@@ -166,9 +166,9 @@ leftArrow.addEventListener("click", () => {
 let secondSlider = [
   {
     id:1,
-    img1URL:"../Images/Photos/section-photo-1(JS).png",
-    img1URL2:"../Images/Photos/section-photo-2(JS).png",
-    img1URL3:"../Images/Photos/section-photo-3(JS).png",
+    img1URL:"https://images.pexels.com/photos/3225517/pexels-photo-3225517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    img1URL2:"https://images.pexels.com/photos/1366922/pexels-photo-1366922.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    img1URL3:"https://images.pexels.com/photos/15286/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     header:"Dolore magna aliqua",
     header2:"Morbi eleifend a libero",
     paragraph:"Lorem ipsum dolor sit amet, ipsum labitur",
@@ -179,9 +179,9 @@ let secondSlider = [
   },
   {
     id:2,
-    img1URL:"../Images/Photos/section-photo-4(JS).jpg",
-    img1URL2:"../Images/Photos/section-photo-5(JS).jpg",
-    img1URL3:"../Images/Photos/section-photo-6(JS).jpg",
+    img1URL:"https://images.pexels.com/photos/9638689/pexels-photo-9638689.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    img1URL2:"https://images.pexels.com/photos/6590699/pexels-photo-6590699.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    img1URL3:"https://images.pexels.com/photos/16059681/pexels-photo-16059681/free-photo-of-clouds-over-mountains.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     header:"Dolore magna aliqua",
     header2:"Morbi eleifend a libero",
     paragraph:"Lorem ipsum dolor sit amet, ipsum labitur",
@@ -192,9 +192,9 @@ let secondSlider = [
   },
   {
     id:3,
-    img1URL:"../Images/Photos/section-photo-7(JS).jpg",
-    img1URL2:"../Images/Photos/section-photo-8(JS).jpg",
-    img1URL3:"../Images/Photos/section-photo-9(JS).jpg",
+    img1URL:"https://images.pexels.com/photos/1693095/pexels-photo-1693095.jpeg?auto=compress&cs=tinysrgb&w=600",
+    img1URL2:"https://images.pexels.com/photos/4215113/pexels-photo-4215113.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    img1URL3:"https://images.pexels.com/photos/4394104/pexels-photo-4394104.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     header:"Dolore magna aliqua",
     header2:"Morbi eleifend a libero",
     paragraph:"Lorem ipsum dolor sit amet, ipsum labitur",
