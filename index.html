@@ -62,7 +62,7 @@
         </div>
         <nav>
           <ul>
-            <a href="#">
+            <a href="./index.html">
               <li>home</li>
             </a>
             <a href="./second-page.html">
@@ -75,7 +75,7 @@
               <li>contact</li>
             </a>
             <img
-            id="loggedUser"
+              id="loggedUser"
               class="logged-user-avatar"
               src="./Images/Photos/girl-photo-in-navbar.png"
               alt="logged user avatar"
@@ -112,22 +112,35 @@
             <h3>LOGO</h3>
           </div>
           <div class="avatar">
-            <img src="./Images/Photos/avatar.png" alt="user avatar" />
+            <img
+              id="loggedUser"
+              class="logged-user-avatar-1"
+              src="./Images/Photos/girl-photo-in-navbar.png"
+              alt="logged user avatar"
+            />
           </div>
         </div>
       </div>
       <nav class="mobile-navigation close">
         <ul>
-          <li><img src="./Images/Logos/home.png" alt="home logo" />home</li>
-          <li>
-            <img
-              src="./Images/Logos/discover.png"
-              alt="discover logo"
-            />discovery
-          </li>
-          <li>
-            <img src="./Images/Logos/photos.png" alt="photo logo" />photos
-          </li>
+          <a class="actual-link" href="./index.html"
+            ><li>
+              <img src="./Images/Logos/home.png" alt="home logo" />home
+            </li></a
+          >
+          <a class="actual-link" href="./second-page.html">
+            <li>
+              <img
+                src="./Images/Logos/discover.png"
+                alt="discover logo"
+              />discovery
+            </li>
+          </a>
+          <a class="actual-link" href="./fetch-data.html">
+            <li>
+              <img src="./Images/Logos/photos.png" alt="photo logo" />photos
+            </li>
+          </a>
           <li>
             <img src="./Images/Logos/mail.png" alt="envelope logo" />contact
           </li>
@@ -145,16 +158,14 @@
     </header>
     <div class="popup">
       <div class="popup-wrap">
-         <div class="X">
-          X
-         </div>
+        <div class="X">X</div>
         <img src="./Images/Photos/popup-image.jpg" alt="avatar image" />
         <h1>dummy text</h1>
         <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
-        consequatur suscipit facilis nostrum iure beatae magnam, ipsa incidunt
-        cumque quos nisi enim at, natus praesentium voluptatum facere nulla
-        voluptatem voluptatibus!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+          consequatur suscipit facilis nostrum iure beatae magnam, ipsa incidunt
+          cumque quos nisi enim at, natus praesentium voluptatum facere nulla
+          voluptatem voluptatibus!
         </p>
       </div>
     </div>
@@ -212,24 +223,103 @@
         <h2>TRENDING</h2>
         <div class="arrows">
           <img
-          id="dinamicSectionLeft"
-          src="./Images/Logos/Arrow Back.png"
-          alt="Arrow key"
-        />
-        <img
-          id="dinamicSectionRight"
-          src="./Images/Logos/arrow.png"
-          alt="Arrow key"
-        />
+            id="dinamicSectionLeft"
+            src="./Images/Logos/Arrow Back.png"
+            alt="Arrow key"
+          />
+          <img
+            id="dinamicSectionRight"
+            src="./Images/Logos/arrow.png"
+            alt="Arrow key"
+          />
         </div>
       </div>
 
-      <div class="section-from-js">
-
-      </div>
-
+      <div class="section-from-js"></div>
     </section>
-
+    <section class="last-section">
+      <div class="fixed-header-wrapper">
+        <h2>HAPPENING NOW</h2>
+        <div class="arrows">
+          <img
+            id="dinamicSectionLeft"
+            src="./Images/Logos/Arrow Back.png"
+            alt="Arrow key"
+          />
+          <img
+            id="dinamicSectionRight"
+            src="./Images/Logos/arrow.png"
+            alt="Arrow key"
+          />
+        </div>
+      </div>
+      <div class="wrapper">
+        <div class="big-pictures">
+          <div class="wrapper-block">
+            <h5>CITY</h5>
+            <h3>Large article title</h3>
+            <p>
+              Lorem ipsum dolor sit amet, in eam odio amet, vix id nullam
+              detracto, vidit vituperatoribus duo
+            </p>
+            <div>
+              <img src="./Images/Logos/time.png" alt="clock" />
+              <p>2 min ago</p>
+            </div>
+          </div>
+          <div class="wrapper-block-1">
+            <h5>TRAVEL</h5>
+            <h3>Large article title</h3>
+            <p>
+              Lorem ipsum dolor sit amet, in eam odio amet, vix id nullam
+              detracto, vidit vituperatoribus duo
+            </p>
+            <div>
+              <img src="./Images/Logos/time.png" alt="clock" />
+              <p>2 min ago</p>
+            </div>
+          </div>
+        </div>
+        <div class="small-pictures">
+          <div class="small-wrapper">
+            <div>
+              <img src="./Images/Photos/last-section-image(3).png" alt="" />
+            </div>
+            <div>
+              <h3>Small title</h3>
+              <div>
+                <img src="./Images/Logos/time.png" alt="clock" />
+                <p>3h ago by <span>Worldnews</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="small-wrapper">
+            <div>
+              <img src="./Images/Photos/last-section-image(4).png" alt="" />
+            </div>
+            <div>
+              <h3>Small title</h3>
+              <div>
+                <img src="./Images/Logos/time.png" alt="clock" />
+                <p>3h ago by <span>Worldnews</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="small-wrapper">
+            <div>
+              <img src="./Images/Photos/last-section-image(5).png" alt="" />
+            </div>
+            <div>
+              <h3>Small title</h3>
+              <div>
+                <img src="./Images/Logos/time.png" alt="clock" />
+                <p>3h ago by <span>Worldnews</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <footer class="footer">
       <div class="footer-logo-wrapper">logo</div>
       <div class="columns-wrap">

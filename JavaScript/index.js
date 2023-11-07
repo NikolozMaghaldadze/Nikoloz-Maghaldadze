@@ -7,10 +7,14 @@ let footer = document.querySelector("footer");
 let clickCount = 0;
 let popup = document.querySelector(".popup");
 let X = document.querySelector(".X");
-let user = document.getElementById("loggedUser");
+let user = document.querySelector(".logged-user-avatar");
+let user2 = document.querySelector(".logged-user-avatar-1");
 let user1 = document.querySelector(".popup-button");
-
+let active = navigationBar.classList.contains("active");
 user.addEventListener("click",()=>{
+  popup.classList.add("active");
+});
+user2.addEventListener("click",()=>{
   popup.classList.add("active");
 });
 X.addEventListener("click",()=>{
@@ -18,6 +22,9 @@ X.addEventListener("click",()=>{
   if(!popup.classList.contains("active")){
     if(window.innerWidth < 450){
       navigationBar.classList.add("active");
+    }
+    if(window.innerWidth > 450){
+      navigationBar.classList.remove("active");
     }
   }
 });
@@ -33,16 +40,16 @@ barMenu.addEventListener("click", function () {
   barMenu.classList.toggle("active");
   navigationBar.classList.toggle("active");
 
-  if (clickCount % 2 === 0) {
+  if (active) {
     mainSections.forEach((x) => {
       x.classList.toggle("none");
     });
-  } else if (clickCount % 2 === 1) {
+  } else if (!active) {
     mainSections.forEach((x) => {
       x.classList.toggle("none");
     });
   }
-  clickCount++;
+  active = true;
 });
 
 window.addEventListener("resize", function () {

@@ -58,16 +58,17 @@
             <a href="./index.html">
               <li>home</li>
             </a>
-            <a href="#">
+            <a href="./second-page.html">
               <li>discovery</li>
             </a>
-            <a href="#">
+            <a href="./fetch-data.html">
               <li>photos</li>
             </a>
             <a href="#">
               <li>contact</li>
             </a>
             <img
+              id="loggedUser"
               class="logged-user-avatar"
               src="./Images/Photos/girl-photo-in-navbar.png"
               alt="logged user avatar"
@@ -104,27 +105,36 @@
             <h3>LOGO</h3>
           </div>
           <div class="avatar">
-            <img src="./Images/Photos/avatar.png" alt="user avatar" />
+            <img class="logged-user-avatar-1" src="./Images/Photos/avatar.png" alt="user avatar" />
           </div>
         </div>
       </div>
       <nav class="mobile-navigation close">
         <ul>
-          <li><img src="./Images/Logos/home.png" alt="home logo" />home</li>
-          <li>
-            <img
-              src="./Images/Logos/discover.png"
-              alt="discover logo"
-            />discovery
-          </li>
-          <li>
-            <img src="./Images/Logos/photos.png" alt="photo logo" />photos
-          </li>
+          <a class="actual-link" href="./index.html"
+            ><li>
+              <img src="./Images/Logos/home.png" alt="home logo" />home
+            </li></a
+          >
+          <a class="actual-link" href="./second-page.html">
+            <li>
+              <img
+                src="./Images/Logos/discover.png"
+                alt="discover logo"
+              />discovery
+            </li>
+          </a>
+          <a class="actual-link" href="./fetch-data.html">
+            <li>
+              <img src="./Images/Logos/photos.png" alt="photo logo" />photos
+            </li>
+          </a>
           <li>
             <img src="./Images/Logos/mail.png" alt="envelope logo" />contact
           </li>
-          <li>
+          <li class="popup-button">
             <img
+              id="loggedUser1"
               class="logged-user-avatar"
               src="./Images/Photos/girl-photo-in-navbar.png"
               alt="logged user avatar"
@@ -134,7 +144,19 @@
         </ul>
       </nav>
     </header>
-    
+    <div class="popup">
+      <div class="popup-wrap">
+        <div class="X">X</div>
+        <img src="./Images/Photos/popup-image.jpg" alt="avatar image" />
+        <h1>dummy text</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+          consequatur suscipit facilis nostrum iure beatae magnam, ipsa incidunt
+          cumque quos nisi enim at, natus praesentium voluptatum facere nulla
+          voluptatem voluptatibus!
+        </p>
+      </div>
+    </div>
     <section class="top-section">
       <div class="top-side">
         <div class="home-side">

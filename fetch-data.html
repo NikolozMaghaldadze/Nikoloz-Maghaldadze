@@ -48,7 +48,7 @@
       </div>
       <nav>
         <ul>
-          <a href="#">
+          <a href="./index.html">
             <li>home</li>
           </a>
           <a href="./second-page.html">
@@ -61,6 +61,7 @@
             <li>contact</li>
           </a>
           <img
+            id="loggedUser"
             class="logged-user-avatar"
             src="./Images/Photos/girl-photo-in-navbar.png"
             alt="logged user avatar"
@@ -103,21 +104,30 @@
     </div>
     <nav class="mobile-navigation close">
       <ul>
-        <li><img src="./Images/Logos/home.png" alt="home logo" />home</li>
-        <li>
-          <img
-            src="./Images/Logos/discover.png"
-            alt="discover logo"
-          />discovery
-        </li>
-        <li>
-          <img src="./Images/Logos/photos.png" alt="photo logo" />photos
-        </li>
+        <a class="actual-link" href="./index.html"
+          ><li>
+            <img src="./Images/Logos/home.png" alt="home logo" />home
+          </li></a
+        >
+        <a class="actual-link" href="./second-page.html">
+          <li>
+            <img
+              src="./Images/Logos/discover.png"
+              alt="discover logo"
+            />discovery
+          </li>
+        </a>
+        <a class="actual-link" href="./fetch-data.html">
+          <li>
+            <img src="./Images/Logos/photos.png" alt="photo logo" />photos
+          </li>
+        </a>
         <li>
           <img src="./Images/Logos/mail.png" alt="envelope logo" />contact
         </li>
-        <li>
+        <li class="popup-button">
           <img
+            id="loggedUser1"
             class="logged-user-avatar"
             src="./Images/Photos/girl-photo-in-navbar.png"
             alt="logged user avatar"
@@ -127,7 +137,19 @@
       </ul>
     </nav>
   </header>
-
+  <div class="popup">
+    <div class="popup-wrap">
+      <div class="X">X</div>
+      <img src="./Images/Photos/popup-image.jpg" alt="avatar image" />
+      <h1>dummy text</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+        consequatur suscipit facilis nostrum iure beatae magnam, ipsa incidunt
+        cumque quos nisi enim at, natus praesentium voluptatum facere nulla
+        voluptatem voluptatibus!
+      </p>
+    </div>
+  </div>
   <section class="full-list-wrapper">
     <h1 class="managers">Fetch Data</h1>
     <div class="wrapper-block-2" id="userinfo-2">
@@ -180,4 +202,5 @@
 </body>
 
 <script src="./JavaScript/fetch.js"></script>
+<script src="./JavaScript/index.js"></script>
 </html>
