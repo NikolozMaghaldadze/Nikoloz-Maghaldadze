@@ -5,6 +5,29 @@ let mainSections = document.querySelectorAll("section");
 let header = document.querySelector("header");
 let footer = document.querySelector("footer");
 let clickCount = 0;
+let popup = document.querySelector(".popup");
+let X = document.querySelector(".X");
+let user = document.getElementById("loggedUser");
+let user1 = document.querySelector(".popup-button");
+
+user.addEventListener("click",()=>{
+  popup.classList.add("active");
+});
+X.addEventListener("click",()=>{
+  popup.classList.remove("active");
+  if(!popup.classList.contains("active")){
+    if(window.innerWidth < 450){
+      navigationBar.classList.add("active");
+    }
+  }
+});
+
+user1.addEventListener("click",()=>{
+  popup.classList.add("active");
+  navigationBar.classList.remove("active");
+  console.log(popup.classList.contains("active"));
+  
+});
 
 barMenu.addEventListener("click", function () {
   barMenu.classList.toggle("active");
@@ -28,6 +51,9 @@ window.addEventListener("resize", function () {
     if (w > 450) {
       navigationBar.classList.remove("active");
       barMenu.classList.remove("active");
+      mainSections.forEach((x) => {
+        x.classList.remove("none");
+      })
     }
   }
 });
@@ -138,7 +164,7 @@ let secondSlider = [
     img1URL3:"../Images/Photos/section-photo-3(JS).png",
     header:"Dolore magna aliqua",
     header2:"Morbi eleifend a libero",
-    paragraph:"Lorem ipsum dolor sit amet, ipsum labitur lucilius mel id, ad has appareat.",
+    paragraph:"Lorem ipsum dolor sit amet, ipsum labitur",
     clockIMG:"../Images/Logos/time.png",
     time1:"2m ago",
     time2:"1h ago",
@@ -151,7 +177,7 @@ let secondSlider = [
     img1URL3:"../Images/Photos/section-photo-6(JS).jpg",
     header:"Dolore magna aliqua",
     header2:"Morbi eleifend a libero",
-    paragraph:"Lorem ipsum dolor sit amet, ipsum labitur lucilius mel id, ad has appareat.",
+    paragraph:"Lorem ipsum dolor sit amet, ipsum labitur",
     clockIMG:"../Images/Logos/time.png",
     time1:"2m ago",
     time2:"1h ago",
@@ -164,7 +190,7 @@ let secondSlider = [
     img1URL3:"../Images/Photos/section-photo-9(JS).jpg",
     header:"Dolore magna aliqua",
     header2:"Morbi eleifend a libero",
-    paragraph:"Lorem ipsum dolor sit amet, ipsum labitur lucilius mel id, ad has appareat.",
+    paragraph:"Lorem ipsum dolor sit amet, ipsum labitur",
     clockIMG:"../Images/Logos/time.png",
     time1:"2m ago",
     time2:"1h ago",
